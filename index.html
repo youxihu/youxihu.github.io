@@ -6,7 +6,6 @@
     <title>Welcome to Youxihu's Site</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             font-family: 'Arial', sans-serif;
             color: #fff;
             text-align: center;
@@ -16,19 +15,76 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            background: linear-gradient(135deg, #a8d8e8, #d0f4c6);
+            animation: bgColorChange 5s infinite alternate;
         }
 
         h1 {
-            font-size: 3em;
-            animation: fadeIn 2s ease-in-out, slideIn 2s ease-out;
+            font-size: 4em; /* 增大字体大小 */
+            color: #ffffff; /* 设置为白色 */
+            animation: textColorChange 3s infinite alternate, slideIn 2s ease-out;
         }
 
-        @keyframes fadeIn {
+        .btn {
+            margin-top: 20px;
+            padding: 15px 30px; /* 增加按钮的大小 */
+            font-size: 1.5em; /* 增大按钮字体 */
+            color: #fff;
+            background-color: #a8d8e8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d0f4c6;
+            transform: scale(1.1);
+        }
+
+        .image-container {
+            margin-top: 30px;
+        }
+
+        .image-container img {
+            width: 300px; /* 控制图片大小 */
+            border-radius: 10px; /* 给图片加圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 给图片加阴影 */
+        }
+
+        @keyframes bgColorChange {
             0% {
-                opacity: 0;
+                background: linear-gradient(135deg, #a8d8e8, #d0f4c6);
+            }
+            25% {
+                background: linear-gradient(135deg, #a2d1e0, #b6f7c4);
+            }
+            50% {
+                background: linear-gradient(135deg, #c5e1e9, #b3f0d1);
+            }
+            75% {
+                background: linear-gradient(135deg, #92c8db, #b8f0c3);
             }
             100% {
-                opacity: 1;
+                background: linear-gradient(135deg, #a8d8e8, #d0f4c6);
+            }
+        }
+
+        @keyframes textColorChange {
+            0% {
+                color: #ffffff;
+            }
+            25% {
+                color: #ffffff;
+            }
+            50% {
+                color: #ffffff;
+            }
+            75% {
+                color: #ffffff;
+            }
+            100% {
+                color: #ffffff;
             }
         }
 
@@ -40,29 +96,18 @@
                 transform: translateY(0);
             }
         }
-
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            color: #fff;
-            background-color: #ff7e5f;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #feb47b;
-            transform: scale(1.1);
-        }
     </style>
 </head>
 <body>
     <div>
         <h1>Welcome to the Youxihu's Site!</h1>
         <button class="btn" onclick="alert('Thank you for visiting!')">Explore Now</button>
+        
+        <!-- 添加图片 -->
+        <div class="image-container">
+            <img src="preview.jpg" alt="Welcome Image">
+        </div>
     </div>
 </body>
 </html>
+
